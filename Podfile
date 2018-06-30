@@ -7,6 +7,6 @@ target 'TaskApp' do
   # Pods for TaskApp
 pod 'Firebase/Core'
 pod 'FirebaseUI/Auth'
-pod 'FirebaseUI/Google'
+pod 'FirebaseUI/Facebook'
 
 end
