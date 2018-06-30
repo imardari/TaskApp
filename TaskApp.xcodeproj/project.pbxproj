@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		707BD433DCE765FB4CF9251C /* Pods_TaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */; };
 		FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFC20E7C8A900C0848A /* AppDelegate.swift */; };
-		FD567EFF20E7C8A900C0848A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFE20E7C8A900C0848A /* ViewController.swift */; };
+		FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */; };
 		FD567F0220E7C8A900C0848A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD567F0020E7C8A900C0848A /* Main.storyboard */; };
 		FD567F0420E7C8AB00C0848A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD567F0320E7C8AB00C0848A /* Assets.xcassets */; };
 		FD567F0720E7C8AB00C0848A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD567F0520E7C8AB00C0848A /* LaunchScreen.storyboard */; };
 		FD567F0F20E7CDE500C0848A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD567F0E20E7CDE500C0848A /* GoogleService-Info.plist */; };
+		FD567F1120E7E35300C0848A /* CompletedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1020E7E35300C0848A /* CompletedTasks.swift */; };
+		FD567F1520E7E64E00C0848A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1420E7E64E00C0848A /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +24,14 @@
 		9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD567EF920E7C8A900C0848A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD567EFC20E7C8A900C0848A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD567EFE20E7C8A900C0848A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTasks.swift; sourceTree = "<group>"; };
 		FD567F0120E7C8A900C0848A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD567F0320E7C8AB00C0848A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD567F0620E7C8AB00C0848A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD567F0820E7C8AB00C0848A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD567F0E20E7CDE500C0848A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD567F1020E7E35300C0848A /* CompletedTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasks.swift; sourceTree = "<group>"; };
+		FD567F1420E7E64E00C0848A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +85,32 @@
 			isa = PBXGroup;
 			children = (
 				FD567EFC20E7C8A900C0848A /* AppDelegate.swift */,
-				FD567EFE20E7C8A900C0848A /* ViewController.swift */,
-				FD567F0020E7C8A900C0848A /* Main.storyboard */,
+				FD567F1320E7E4A100C0848A /* View */,
+				FD567F1220E7E48E00C0848A /* Controller */,
 				FD567F0320E7C8AB00C0848A /* Assets.xcassets */,
 				FD567F0520E7C8AB00C0848A /* LaunchScreen.storyboard */,
 				FD567F0820E7C8AB00C0848A /* Info.plist */,
 				FD567F0E20E7CDE500C0848A /* GoogleService-Info.plist */,
 			);
 			path = TaskApp;
+			sourceTree = "<group>";
+		};
+		FD567F1220E7E48E00C0848A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */,
+				FD567F1420E7E64E00C0848A /* Login.swift */,
+				FD567F1020E7E35300C0848A /* CompletedTasks.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FD567F1320E7E4A100C0848A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD567F0020E7C8A900C0848A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +125,7 @@
 				FD567EF620E7C8A900C0848A /* Frameworks */,
 				FD567EF720E7C8A900C0848A /* Resources */,
 				B16F7A658767EA561680E516 /* [CP] Embed Pods Frameworks */,
+				38EEE51E977BF810A0737BAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,6 +184,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		38EEE51E977BF810A0737BAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B16F7A658767EA561680E516 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,11 +213,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -206,8 +255,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD567EFF20E7C8A900C0848A /* ViewController.swift in Sources */,
+				FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */,
 				FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */,
+				FD567F1120E7E35300C0848A /* CompletedTasks.swift in Sources */,
+				FD567F1520E7E64E00C0848A /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
