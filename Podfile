@@ -5,7 +5,9 @@ target 'TaskApp' do
   use_frameworks!
 
   # Pods for TaskApp
+
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 pod 'FirebaseUI/Auth'
 pod 'FirebaseUI/Facebook'
 
