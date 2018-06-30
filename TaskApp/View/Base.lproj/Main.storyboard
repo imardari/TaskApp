@@ -57,6 +57,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginTapped:" destination="bMg-ET-0FH" eventType="touchUpInside" id="LFa-13-dMB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -103,6 +106,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="RRd-MG-Nv8"/>
                     <connections>
+                        <outlet property="emailTextField" destination="rKN-KT-7Dr" id="hu7-FY-n8j"/>
+                        <outlet property="passwordTextField" destination="hQ0-Lu-MkM" id="sRb-Pl-gQ0"/>
                         <segue destination="KmU-bq-1Jj" kind="presentation" identifier="goToTasks" id="Qyk-xO-G6f"/>
                     </connections>
                 </viewController>
