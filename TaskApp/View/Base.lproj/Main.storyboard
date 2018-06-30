@@ -37,13 +37,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="351" height="55.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hQ0-Lu-MkM">
                                                 <rect key="frame" x="0.0" y="67.5" width="351" height="56"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJF-lO-68G">
                                                 <rect key="frame" x="0.0" y="135.5" width="351" height="55.5"/>
@@ -135,13 +135,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="351" height="55.5"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k23-r7-Sks">
                                                 <rect key="frame" x="0.0" y="67.5" width="351" height="56"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRy-E0-yM4">
                                                 <rect key="frame" x="0.0" y="135.5" width="351" height="55.5"/>
@@ -155,6 +155,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="registerTapped:" destination="k3w-OZ-L9H" eventType="touchUpInside" id="h8I-4p-Nff"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -174,6 +177,8 @@
                         <viewLayoutGuide key="safeArea" id="Hwa-gE-82V"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="MHf-xS-bcs" id="AxO-fG-kef"/>
+                        <outlet property="passwordTextField" destination="k23-r7-Sks" id="xFB-Sr-FdF"/>
                         <segue destination="KmU-bq-1Jj" kind="show" identifier="goToTasks" id="Q5S-Op-lB0"/>
                     </connections>
                 </viewController>
@@ -216,6 +221,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KmU-bq-1Jj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mxQ-it-VaK">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

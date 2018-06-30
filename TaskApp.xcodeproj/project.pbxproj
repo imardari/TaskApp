@@ -17,6 +17,8 @@
 		FD567F1120E7E35300C0848A /* CompletedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1020E7E35300C0848A /* CompletedTasks.swift */; };
 		FD567F1520E7E64E00C0848A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1420E7E64E00C0848A /* Login.swift */; };
 		FD567F1720E7F12600C0848A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1620E7F12600C0848A /* Register.swift */; };
+		FD567F1B20E8009800C0848A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1A20E8009800C0848A /* Alert.swift */; };
+		FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1C20E8011D00C0848A /* EmailValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FD567F1020E7E35300C0848A /* CompletedTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasks.swift; sourceTree = "<group>"; };
 		FD567F1420E7E64E00C0848A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FD567F1620E7F12600C0848A /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		FD567F1A20E8009800C0848A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FD567F1C20E8011D00C0848A /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				FD567EFC20E7C8A900C0848A /* AppDelegate.swift */,
 				FD567F1320E7E4A100C0848A /* View */,
 				FD567F1220E7E48E00C0848A /* Controller */,
+				FD567F1920E8007C00C0848A /* Helpers */,
 				FD567F0320E7C8AB00C0848A /* Assets.xcassets */,
 				FD567F0520E7C8AB00C0848A /* LaunchScreen.storyboard */,
 				FD567F0820E7C8AB00C0848A /* Info.plist */,
@@ -114,6 +119,15 @@
 				FD567F0020E7C8A900C0848A /* Main.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FD567F1920E8007C00C0848A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD567F1A20E8009800C0848A /* Alert.swift */,
+				FD567F1C20E8011D00C0848A /* EmailValidation.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD567F1B20E8009800C0848A /* Alert.swift in Sources */,
+				FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */,
 				FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */,
 				FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */,
 				FD567F1120E7E35300C0848A /* CompletedTasks.swift in Sources */,
