@@ -19,6 +19,7 @@
 		FD567F1720E7F12600C0848A /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1620E7F12600C0848A /* Register.swift */; };
 		FD567F1B20E8009800C0848A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1A20E8009800C0848A /* Alert.swift */; };
 		FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F1C20E8011D00C0848A /* EmailValidation.swift */; };
+		FD567F2120E81A7200C0848A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567F2020E81A7200C0848A /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FD567F1620E7F12600C0848A /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FD567F1A20E8009800C0848A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FD567F1C20E8011D00C0848A /* EmailValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidation.swift; sourceTree = "<group>"; };
+		FD567F2020E81A7200C0848A /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				FD567F1620E7F12600C0848A /* Register.swift */,
 				FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */,
 				FD567F1020E7E35300C0848A /* CompletedTasks.swift */,
+				FD567F2020E81A7200C0848A /* Settings.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				FD567F1B20E8009800C0848A /* Alert.swift in Sources */,
 				FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */,
+				FD567F2120E81A7200C0848A /* Settings.swift in Sources */,
 				FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */,
 				FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */,
 				FD567F1120E7E35300C0848A /* CompletedTasks.swift in Sources */,
