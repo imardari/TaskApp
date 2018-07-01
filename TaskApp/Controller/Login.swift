@@ -16,6 +16,10 @@ class Login: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeToNotifications()
+                
+        emailTextField.delegate = TextFieldDelegate.sharedInstance
+        passwordTextField.delegate = TextFieldDelegate.sharedInstance
     }
     
     @IBAction func loginTapped(_ sender: Any) {
@@ -36,11 +40,30 @@ class Login: UIViewController {
         
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
+                Alert.showAlert(title: "Login Failed", message: "Email or password are incorrect", vc: self)
                 print("There was an error: \(error!)")
             } else {
                 self.performSegue(withIdentifier: "goToTasks", sender: self)
                 
             }
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    // Shift view when keyboard pops up
+    @objc func keyboardWillShow(_ notification: Notification) {
+        view.frame.origin.y = -80
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        view.frame.origin.y = 0
+    }
+    
+    func subscribeToNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
 }

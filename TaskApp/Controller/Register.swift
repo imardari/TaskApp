@@ -16,6 +16,14 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        subscribeToNotifications()
+        
+        emailTextField.delegate = TextFieldDelegate.sharedInstance
+        passwordTextField.delegate = TextFieldDelegate.sharedInstance
+    }
+    
+    @IBAction func cancelTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 
     @IBAction func registerTapped(_ sender: Any) {
@@ -41,5 +49,23 @@ class Register: UIViewController {
                 self.performSegue(withIdentifier: "goToTasks", sender: self)
             }
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    // Shift view when keyboard pops up
+    @objc func keyboardWillShow(_ notification: Notification) {
+        view.frame.origin.y = -80
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        view.frame.origin.y = 0
+    }
+    
+    func subscribeToNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
     }
 }

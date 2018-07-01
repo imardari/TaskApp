@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		707BD433DCE765FB4CF9251C /* Pods_TaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */; };
+		FD265F1720E857CF004FA5E9 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD265F1620E857CF004FA5E9 /* TextFieldDelegate.swift */; };
 		FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFC20E7C8A900C0848A /* AppDelegate.swift */; };
 		FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */; };
 		FD567F0220E7C8A900C0848A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD567F0020E7C8A900C0848A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		438EECB0672D89D9E0B41E7B /* Pods-TaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8335CE9ED9DE0E52A9F1F730 /* Pods-TaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.release.xcconfig"; sourceTree = "<group>"; };
 		9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD265F1620E857CF004FA5E9 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		FD567EF920E7C8A900C0848A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD567EFC20E7C8A900C0848A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveTasks.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				FD567F1A20E8009800C0848A /* Alert.swift */,
 				FD567F1C20E8011D00C0848A /* EmailValidation.swift */,
+				FD265F1620E857CF004FA5E9 /* TextFieldDelegate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				FD567F1B20E8009800C0848A /* Alert.swift in Sources */,
 				FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */,
+				FD265F1720E857CF004FA5E9 /* TextFieldDelegate.swift in Sources */,
 				FD567F2120E81A7200C0848A /* Settings.swift in Sources */,
 				FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */,
 				FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */,
