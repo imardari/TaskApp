@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
+//import FBSDKCoreKit
 import FBSDKLoginKit
 
 class Login: UIViewController {
@@ -20,19 +20,21 @@ class Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        if (FBSDKAccessToken.current() != nil) {
-        //            performSegue(withIdentifier: "goToTasks", sender: self)
-        //        }
+//        if (FBSDKAccessToken.current() != nil) {
+//            performSegue(withIdentifier: "goToTasks", sender: self)
+//        }
         
-        // Log out if the user was logged in when terminated the app
+        // Log out on app termination
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logOut()
         
+        // Create and place the button in the stack
         let loginButton = FBSDKLoginButton()
+        loginButton.delegate = self
         loginButton.readPermissions = ["public_profile", "email"]
         fbLoginStackView.addArrangedSubview(loginButton)
-        loginButton.delegate = self
         
+        // Keyboard notifications
         subscribeToNotifications()
         
         emailTextField.delegate = TextFieldDelegate.sharedInstance
@@ -40,6 +42,7 @@ class Login: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
+        // Perform credentials validation
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
@@ -55,17 +58,21 @@ class Login: UIViewController {
             Alert.showAlert(title: "Password too short", message: "Password should be at least 6 characters long", vc: self)
         }
         
+        let activityIndicator = UIViewController.startActivityIndicator(onView: self.view)
+        
+        // Perform the authentication if above validation passed
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
                 Alert.showAlert(title: "Login Failed", message: "Email or password are incorrect", vc: self)
                 print("There was an error: \(error!)")
             } else {
+                UIViewController.stopActivityIndicator(activityIndicator)
                 self.performSegue(withIdentifier: "goToTasks", sender: self)
-                
             }
         }
     }
     
+    // Hide keyboard on touches outside the textField(s)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
@@ -92,6 +99,8 @@ extension Login: FBSDKLoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        let activityIndicator = UIViewController.startActivityIndicator(onView: self.view)
+        
         let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
             if let error = error {
@@ -99,6 +108,7 @@ extension Login: FBSDKLoginButtonDelegate {
                 print("There was an error signing in with facebook: \(error)")
                 return
             }
+            UIViewController.stopActivityIndicator(activityIndicator)
             self.performSegue(withIdentifier: "goToTasks", sender: self)
         }
     }

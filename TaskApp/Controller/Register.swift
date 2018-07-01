@@ -16,6 +16,7 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Keyboard notifications
         subscribeToNotifications()
         
         emailTextField.delegate = TextFieldDelegate.sharedInstance
@@ -27,6 +28,7 @@ class Register: UIViewController {
     }
 
     @IBAction func registerTapped(_ sender: Any) {
+        // Perform credentials validation
         let email = emailTextField.text!
         let password = passwordTextField.text!
         
@@ -41,16 +43,21 @@ class Register: UIViewController {
         if password.count < 6 {
             Alert.showAlert(title: "Password too short", message: "Password should be at least 6 characters long", vc: self)
         }
-        // Set up a new user in our Firebase db
+        
+        let activityIndicator = UIViewController.startActivityIndicator(onView: self.view)
+        
+        // Set up a new user in our Firebase db if above validation passed
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
                 print("There was an error: \(error!)")
             } else {
+                UIViewController.stopActivityIndicator(activityIndicator)
                 self.performSegue(withIdentifier: "goToTasks", sender: self)
             }
         }
     }
     
+    // Hide keyboard on touches outside the textField(s)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
