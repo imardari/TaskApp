@@ -24,10 +24,6 @@ class Login: UIViewController {
 //            performSegue(withIdentifier: "goToTasks", sender: self)
 //        }
         
-        // Log out on app termination
-        let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logOut()
-        
         // Create and place the button in the stack
         let loginButton = FBSDKLoginButton()
         loginButton.delegate = self
@@ -64,10 +60,11 @@ class Login: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
                 Alert.showAlert(title: "Login Failed", message: "Email or password are incorrect", vc: self)
+                UIViewController.stopActivityIndicator(activityIndicator)
                 print("There was an error: \(error!)")
             } else {
-                UIViewController.stopActivityIndicator(activityIndicator)
                 self.performSegue(withIdentifier: "goToTasks", sender: self)
+                UIViewController.stopActivityIndicator(activityIndicator)
             }
         }
     }

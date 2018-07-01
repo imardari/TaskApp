@@ -49,6 +49,7 @@ class Register: UIViewController {
         // Set up a new user in our Firebase db if above validation passed
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
+                UIViewController.stopActivityIndicator(activityIndicator)
                 print("There was an error: \(error!)")
             } else {
                 UIViewController.stopActivityIndicator(activityIndicator)

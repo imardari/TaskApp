@@ -217,7 +217,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Current Tasks" id="A3q-Y6-k9F">
+                                <navigationItem title="Active Tasks" id="A3q-Y6-k9F">
                                     <barButtonItem key="rightBarButtonItem" image="settings" id="0EU-tP-235">
                                         <connections>
                                             <segue destination="yAc-ez-UEl" kind="show" id="2NB-kb-CTh"/>
@@ -393,7 +393,7 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Elf-mT-vFh"/>
-        <segue reference="Q5S-Op-lB0"/>
+        <segue reference="2NB-kb-CTh"/>
+        <segue reference="Qyk-xO-G6f"/>
     </inferredMetricsTieBreakers>
 </document>
