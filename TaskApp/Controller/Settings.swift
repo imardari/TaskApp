@@ -16,10 +16,6 @@ class Settings: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func logoutTapped(_ sender: Any) {
         do {
             try Auth.auth().signOut()
