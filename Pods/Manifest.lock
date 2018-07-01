@@ -9,6 +9,8 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.34.0):
     - FBSDKCoreKit
+  - FBSDKShareKit (4.34.0):
+    - FBSDKCoreKit (~> 4.34.0)
   - Firebase/Auth (5.4.0):
     - Firebase/CoreOnly
     - FirebaseAuth (= 5.0.2)
@@ -52,6 +54,8 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - FBSDKLoginKit
+  - FBSDKShareKit
   - Firebase/Core
   - Firebase/Database
   - FirebaseUI/Auth
@@ -62,6 +66,7 @@ SPEC REPOS:
     - Bolts
     - FBSDKCoreKit
     - FBSDKLoginKit
+    - FBSDKShareKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -78,6 +83,7 @@ SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
   FBSDKLoginKit: 8c78f57a145afb756e4755e69195ebe08a42466e
+  FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
   Firebase: d66f4f29c23f22d96808d9abc174d81d8eee968f
   FirebaseAnalytics: b3628aea54c50464c32c393fb2ea032566e7ecc2
   FirebaseAuth: 096e457cdd4274412a66c4a35874787e411f5a03
@@ -90,6 +96,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: caa1fbfa2e9679cb5489a98e26a381d7c0a77e7a
+PODFILE CHECKSUM: b00e0e5443a9d25a9d97d4f7ec40310a87fca222
 
 COCOAPODS: 1.5.3

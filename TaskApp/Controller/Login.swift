@@ -8,16 +8,33 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class Login: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var fbLoginStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //        if (FBSDKAccessToken.current() != nil) {
+        //            performSegue(withIdentifier: "goToTasks", sender: self)
+        //        }
+        
+        // Log out if the user was logged in when terminated the app
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logOut()
+        
+        let loginButton = FBSDKLoginButton()
+        loginButton.readPermissions = ["public_profile", "email"]
+        fbLoginStackView.addArrangedSubview(loginButton)
+        loginButton.delegate = self
+        
         subscribeToNotifications()
-                
+        
         emailTextField.delegate = TextFieldDelegate.sharedInstance
         passwordTextField.delegate = TextFieldDelegate.sharedInstance
     }
@@ -65,5 +82,24 @@ class Login: UIViewController {
     func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
+    }
+}
+
+// MARK:- Facebook Login Delegates
+extension Login: FBSDKLoginButtonDelegate {
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Logged out from Facebook")
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                Alert.showAlert(title: "Whoops", message: "Failed to login with Facebook", vc: self)
+                print("There was an error signing in with facebook: \(error)")
+                return
+            }
+            self.performSegue(withIdentifier: "goToTasks", sender: self)
+        }
     }
 }

@@ -67,7 +67,7 @@
                                         <rect key="frame" x="0.0" y="406" width="351" height="191"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="coa-5W-lrI">
-                                                <rect key="frame" x="52" y="0.0" width="247" height="191"/>
+                                                <rect key="frame" x="52" y="0.0" width="247" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeE-iX-JMd">
                                                         <rect key="frame" x="0.0" y="0.0" width="179" height="20.5"/>
@@ -90,6 +90,9 @@
                                                     <constraint firstItem="FeE-iX-JMd" firstAttribute="firstBaseline" secondItem="33b-6y-Q9x" secondAttribute="firstBaseline" id="YId-9B-eez"/>
                                                 </constraints>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="n2e-4Y-c9F">
+                                                <rect key="frame" x="120.5" y="35" width="110" height="156"/>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -107,13 +110,14 @@
                     <navigationItem key="navigationItem" id="RRd-MG-Nv8"/>
                     <connections>
                         <outlet property="emailTextField" destination="rKN-KT-7Dr" id="hu7-FY-n8j"/>
+                        <outlet property="fbLoginStackView" destination="n2e-4Y-c9F" id="LsE-QR-Qtn"/>
                         <outlet property="passwordTextField" destination="hQ0-Lu-MkM" id="sRb-Pl-gQ0"/>
                         <segue destination="KmU-bq-1Jj" kind="presentation" identifier="goToTasks" id="Qyk-xO-G6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-0D-xwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-612" y="121"/>
+            <point key="canvasLocation" x="-1439" y="114"/>
         </scene>
         <!--Register-->
         <scene sceneID="gfW-Ng-Ao3">
@@ -199,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvP-0F-Ak0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-612" y="957.57121439280365"/>
+            <point key="canvasLocation" x="-1439" y="950"/>
         </scene>
         <!--Item-->
         <scene sceneID="ppO-EY-tBj">
@@ -248,6 +252,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="KmU-bq-1Jj" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VZ9-dd-Wgx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mxQ-it-VaK">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -388,7 +393,7 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2NB-kb-CTh"/>
-        <segue reference="Qyk-xO-G6f"/>
+        <segue reference="Elf-mT-vFh"/>
+        <segue reference="Q5S-Op-lB0"/>
     </inferredMetricsTieBreakers>
 </document>

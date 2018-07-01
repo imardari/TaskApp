@@ -10,5 +10,7 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'FirebaseUI/Auth'
 pod 'FirebaseUI/Facebook'
+pod 'FBSDKLoginKit'
+pod 'FBSDKShareKit'
 
 end
