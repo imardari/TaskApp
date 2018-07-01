@@ -20,9 +20,12 @@ class Login: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if (FBSDKAccessToken.current() != nil) {
-//            performSegue(withIdentifier: "goToTasks", sender: self)
-//        }
+        // Skip the login screen if user previously logged in
+        Auth.auth().addStateDidChangeListener { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "goToTasks", sender: self)
+            }
+        }
         
         // Create and place the button in the stack
         let loginButton = FBSDKLoginButton()
