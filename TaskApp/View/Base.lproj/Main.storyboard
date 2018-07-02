@@ -14,7 +14,7 @@
         <!--Login-->
         <scene sceneID="DIy-Wd-Tkv">
             <objects>
-                <viewController id="bMg-ET-0FH" customClass="Login" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goToLogin" id="bMg-ET-0FH" customClass="Login" customModule="TaskApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d28-LL-D0Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-0D-xwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1439" y="114"/>
+            <point key="canvasLocation" x="-502" y="142"/>
         </scene>
         <!--Register-->
         <scene sceneID="gfW-Ng-Ao3">
@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rvP-0F-Ak0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1439" y="950"/>
+            <point key="canvasLocation" x="-502" y="904"/>
         </scene>
         <!--Active Tasks-->
         <scene sceneID="ppO-EY-tBj">
@@ -241,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyX-u0-5rI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024.8" y="-162.3688155922039"/>
+            <point key="canvasLocation" x="1922" y="-365"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="QRB-ru-Cdo">
@@ -262,7 +262,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1C-bW-VWN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.20000000000005" y="141.67916041979012"/>
+            <point key="canvasLocation" x="822" y="142"/>
         </scene>
         <!--Completed Task-->
         <scene sceneID="bJ9-Ot-EMA">
@@ -300,7 +300,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XmI-NY-c6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2024.8" y="618.44077961019491"/>
+            <point key="canvasLocation" x="2727" y="142"/>
         </scene>
         <!--Settings-->
         <scene sceneID="zQj-DU-qjy">
@@ -347,7 +347,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="logoutTapped:" destination="yAc-ez-UEl" eventType="touchUpInside" id="4oL-Uq-k0u"/>
-                                    <segue destination="bMg-ET-0FH" kind="show" identifier="goToLogin" id="sCk-N7-VYp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -373,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K2d-Z6-ptG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317.5999999999999" y="141.67916041979012"/>
+            <point key="canvasLocation" x="1922" y="647"/>
         </scene>
     </scenes>
     <resources>

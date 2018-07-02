@@ -19,9 +19,10 @@ class Settings: UIViewController {
     @IBAction func logoutTapped(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            let fbLoginManager = FBSDKLoginManager()
-            fbLoginManager.logOut()
-            performSegue(withIdentifier: "goToLogin", sender: self)
+            FBSDKLoginManager().logOut()
+//            performSegue(withIdentifier: "goToLogin", sender: self)
+            let loginVC = storyboard?.instantiateViewController(withIdentifier: "goToLogin") as! Login
+            present(loginVC, animated: true, completion: nil)
         } catch {
             Alert.showAlert(title: "Unable to logout", message: "Please check your internet connection", vc: self)
             print("There was an error logging out: \(error)")
