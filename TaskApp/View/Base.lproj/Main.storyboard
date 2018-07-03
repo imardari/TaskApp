@@ -217,7 +217,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Active Tasks" id="A3q-Y6-k9F"/>
+                                <navigationItem title="Active Tasks" id="A3q-Y6-k9F">
+                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="bVW-mx-bRv">
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="Sfo-9S-lou" id="0zo-h0-J6g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
                             </items>
                         </navigationBar>
                         <prototypes>
