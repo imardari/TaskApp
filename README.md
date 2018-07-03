@@ -22,7 +22,10 @@ This is a 1.0 version which will include basic functionality of a To-do app. Whe
 ## Future Features
 
 <ul>
+<li>Set a profile picture</li>
+<li>Set a nick name</li>
 <li>Add friends</li>
+<li>Chat with friends</li>
 <li>Assign taks to friends</li>
 <li>Prohibit from editing or deleting the task</li>
 <li>Set a deadline for the tasks assigned to friends</li>
@@ -32,6 +35,8 @@ This is a 1.0 version which will include basic functionality of a To-do app. Whe
 <li>Mark each sub task as completed and once the last sub task is completed - automatically complete the task</li>
 <li>Store active tasks assigned to your friends</li>
 <li>Store completed tasks that were assigned to your friends</li>
+<li>Add a leader board(create competition) that is vissible to friends only. That way you can see who completed more tasks</li>
+<li>Add points only for the tasks that were assigned by someone else, do not add points for the tasks you assigned to yourself(prevent cheating)</li>
 <li>More to come...</li>
 </ul>
 
