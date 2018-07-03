@@ -112,7 +112,7 @@
                         <outlet property="emailTextField" destination="rKN-KT-7Dr" id="hu7-FY-n8j"/>
                         <outlet property="fbLoginStackView" destination="n2e-4Y-c9F" id="LsE-QR-Qtn"/>
                         <outlet property="passwordTextField" destination="hQ0-Lu-MkM" id="sRb-Pl-gQ0"/>
-                        <segue destination="KmU-bq-1Jj" kind="presentation" identifier="goToTasks" id="Qyk-xO-G6f"/>
+                        <segue destination="KmU-bq-1Jj" kind="show" identifier="goToTasks" id="Qyk-xO-G6f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-0D-xwv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,6 +383,6 @@
         <image name="settings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q5S-Op-lB0"/>
+        <segue reference="Qyk-xO-G6f"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -20,7 +20,6 @@ class Settings: UIViewController {
         do {
             try Auth.auth().signOut()
             FBSDKLoginManager().logOut()
-//            performSegue(withIdentifier: "goToLogin", sender: self)
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "goToLogin") as! Login
             present(loginVC, animated: true, completion: nil)
         } catch {
@@ -38,6 +37,7 @@ extension Settings: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "Share on Facebook"
         return cell
     }
 }

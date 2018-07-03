@@ -40,28 +40,13 @@ class Login: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: Any) {
-        // Perform credentials validation
-        let email = emailTextField.text!
-        let password = passwordTextField.text!
-        
-        if email.isEmpty || password.isEmpty {
-            Alert.showAlert(title: "Incomplete", message: "Please fill out both email and password fields", vc: self)
-        }
-        
-        if !email.isValidEmail {
-            Alert.showAlert(title: "Invalid email format", message: "Please make sure you format your email correctly", vc: self)
-        }
-        
-        if password.count < 6 {
-            Alert.showAlert(title: "Password too short", message: "Password should be at least 6 characters long", vc: self)
-        }
         
         let activityIndicator = UIViewController.startActivityIndicator(onView: self.view)
         
-        // Perform the authentication if above validation passed
+        // Perform the authentication
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if error != nil {
-                Alert.showAlert(title: "Login Failed", message: "Email or password are incorrect", vc: self)
+                Alert.showAlert(title: "Login Failed", message: "Please verify your email and password", vc: self)
                 UIViewController.stopActivityIndicator(activityIndicator)
                 print("There was an error: \(error!)")
             } else {

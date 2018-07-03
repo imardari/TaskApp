@@ -16,6 +16,7 @@ class Register: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Keyboard notifications
         subscribeToNotifications()
         
@@ -28,6 +29,7 @@ class Register: UIViewController {
     }
 
     @IBAction func registerTapped(_ sender: Any) {
+        
         // Perform credentials validation
         let email = emailTextField.text!
         let password = passwordTextField.text!
