@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		707BD433DCE765FB4CF9251C /* Pods_TaskApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */; };
+		FD0BC26A20EAF84F009953DF /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0BC26920EAF84F009953DF /* TaskModel.swift */; };
 		FD265F1720E857CF004FA5E9 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD265F1620E857CF004FA5E9 /* TextFieldDelegate.swift */; };
 		FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFC20E7C8A900C0848A /* AppDelegate.swift */; };
 		FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD567EFE20E7C8A900C0848A /* ActiveTasks.swift */; };
@@ -28,6 +29,7 @@
 		438EECB0672D89D9E0B41E7B /* Pods-TaskApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8335CE9ED9DE0E52A9F1F730 /* Pods-TaskApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaskApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TaskApp/Pods-TaskApp.release.xcconfig"; sourceTree = "<group>"; };
 		9E61250679D64CF7683CBF00 /* Pods_TaskApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaskApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD0BC26920EAF84F009953DF /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		FD265F1620E857CF004FA5E9 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		FD3E5EA320E926E6007B4523 /* TaskApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskApp.entitlements; sourceTree = "<group>"; };
 		FD567EF920E7C8A900C0848A /* TaskApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FD0BC26820EAF827009953DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD0BC26920EAF84F009953DF /* TaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FD567EF020E7C8A900C0848A = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 			children = (
 				FD3E5EA320E926E6007B4523 /* TaskApp.entitlements */,
 				FD567EFC20E7C8A900C0848A /* AppDelegate.swift */,
+				FD0BC26820EAF827009953DF /* Model */,
 				FD567F1320E7E4A100C0848A /* View */,
 				FD567F1220E7E48E00C0848A /* Controller */,
 				FD567F1920E8007C00C0848A /* Helpers */,
@@ -298,6 +309,7 @@
 				FD567F1D20E8011D00C0848A /* EmailValidation.swift in Sources */,
 				FD265F1720E857CF004FA5E9 /* TextFieldDelegate.swift in Sources */,
 				FD567F2120E81A7200C0848A /* Settings.swift in Sources */,
+				FD0BC26A20EAF84F009953DF /* TaskModel.swift in Sources */,
 				FD567EFF20E7C8A900C0848A /* ActiveTasks.swift in Sources */,
 				FD567EFD20E7C8A900C0848A /* AppDelegate.swift in Sources */,
 				FD9366CE20E9476D00835F49 /* ActivityIndicator.swift in Sources */,
