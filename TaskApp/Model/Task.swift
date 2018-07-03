@@ -1,5 +1,5 @@
 //
-//  TaskModel.swift
+//  Task.swift
 //  TaskApp
 //
 //  Created by Ion M on 7/2/18.
