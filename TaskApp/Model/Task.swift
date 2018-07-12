@@ -13,7 +13,7 @@ struct Task {
     
     let ref: DatabaseReference?
     let key: String
-    let name: String
+    var name: String
     var completed: Bool
     
     init(name: String, completed: Bool, key: String = "") {
